@@ -86,7 +86,7 @@ defmodule PokedexWeb.IndexLive do
       |> assign(:show_details, true)
       |> assign(
         :selected_pokemon,
-        Enum.at(socket.assigns.pokemons, String.to_integer(index), %{})
+        Enum.at(socket.assigns.current_pokemons, String.to_integer(index), %{})
       )
 
     {:noreply, socket}
